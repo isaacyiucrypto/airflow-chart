@@ -20,6 +20,7 @@ spec:
     port: 80
     targetPort: 8080
     protocol: TCP
+  type: NodePort
   selector:
     app: {{ template "airflow.name" . }}-webserver
     release: {{ .Release.Name }}
